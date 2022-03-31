@@ -43,8 +43,8 @@ def kl_divergence_test(real_ds, syn_ds):
     kl_divs = []
 
     for col in cols:
-        real_prob_ = real_ds[col]/real_ds[col].sum()
-        syn_prob_ = syn_ds[col]/syn_ds[col].sum()
+        real_prob_ = (real_ds[col]+math.pow(10, -9))/(real_ds[col].sum()+len(real_ds)*math.pow(10, -9))
+        syn_prob_ = (syn_ds[col]+math.pow(10, -9))/(syn_ds[col].sum()+len(real_ds)*math.pow(10, -9))
         try:
             score = kl_divergence(real_prob_, syn_prob_)
             kl_divs.append([col, score])
