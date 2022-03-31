@@ -1,5 +1,6 @@
 from scipy import stats  
 import pandas as pd
+import math
 
 
 def ks_test(real_ds, syn_ds):
@@ -32,3 +33,22 @@ def t_test(real_ds, syn_ds):
             print(f'{e} occurred in column {col}')
 
     return t_tests
+
+
+def kl_divergence(p, q):
+	return sum(p[i] * math.log2(p[i]/q[i]) for i in range(len(p)))
+
+def kl_divergence_test(real_ds, syn_ds):
+    cols = real_ds.columns # what type?
+    kl_divs = []
+
+    for col in cols:
+        real_prob_ = real_ds[col]/real_ds[col].sum()
+        syn_prob_ = syn_ds[col]/syn_ds[col].sum()
+        try:
+            score = kl_divergence(real_prob_, syn_prob_)
+            kl_divs.append([col, score])
+        except Exception as e:
+            print(f'{e} occurred in column {col}')
+
+    return kl_divs
