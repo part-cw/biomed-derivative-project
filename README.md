@@ -9,6 +9,8 @@ To generate synthetic data which will most accurately resemble the original real
 
 #### 1. Development 
 
+``` bash
+
 +---age_column_tests                            (Tests on 'Age' column of the dataset)                   
 |       all_tests.ipynb
 |       all_tests_v2.ipynb
@@ -51,3 +53,5 @@ To generate synthetic data which will most accurately resemble the original real
 |       synData_gauscop_5000.csv
 |       synData_tvae.csv
 |       synData_tvae_5000.csv
+
+```
