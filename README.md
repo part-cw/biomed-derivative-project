@@ -53,5 +53,36 @@ To generate synthetic data which will most accurately resemble the original real
 |       synData_gauscop_5000.csv
 |       synData_tvae.csv
 |       synData_tvae_5000.csv
-
+|
++---test_examples                                (Examples of statistical tests)
+|       kl_divergence.ipynb
+|       ks.ipynb
+|       t-test.ipynb
+|       x2_gof.ipynb
+|       
+|   stat_tests.py                                (The collection of functions to compute statistical tests on one column of the dataset)
+|   universal_stat_tests.py                      (The collection of functions to compute statistical tests on all columns of the dataset)
 ```
+
+#### 2. ctgan_test
+
+``` bash
+|   ctgan_example.ipynb                          (Testing the work of CTGAN)
+|   cummsums.ipynb                               (Plotting cummulative sums graphs)
+|   gaussian_copula_test.ipynb                   (Testing the work of GaussianCopula GAN)
+|   stat_tests.py                                 
+|   syn_data_gen.ipynb                           (Generating datasets of the same size as original one)
+|   syn_data_gen_5000.ipynb                      (Generating datasets of 5k rows)
+|
++---datasets
+|       kag_risk_factors_cervical_cancer.csv
+|
++---synData
+|       synData_ctgan.csv
+|       synData_ctgan_5000.csv
+|       synData_gauscop.csv
+|       synData_gauscop_5000.csv
+|       synData_tvae.csv
+|       synData_tvae_5000.csv
+```
+
