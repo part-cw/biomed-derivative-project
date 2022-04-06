@@ -1,0 +1,1 @@
+# This will have any function (you had to create) used to generate synthetic data. Maybe this script won’t be necessary at this stage.
